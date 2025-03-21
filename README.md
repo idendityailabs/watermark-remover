@@ -10,11 +10,11 @@ A Python tool for removing text and watermarks from images using computer vision
 
 
 To start the environment:
-
+```bash
 python -m venv venv
 source venv/bin/avtivate
 pip install -r requirements.txt
-
+```
 
 ## Usage For open cv masking
 ```bash
