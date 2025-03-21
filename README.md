@@ -9,6 +9,14 @@ A Python tool for removing text and watermarks from images using computer vision
 - Works with jpg, jpeg, png, and webp images
 
 
+## Prerequisities for yolo masker
+```bash
+git lfs
+git clone https://huggingface.co/spaces/fancyfeast/joycaption-watermark-detection
+```
+# then move far5y1y5-8000.pt and yolo11x-train28-best.pt files in that folder to main folder
+
+
 To start the environment:
 ```bash
 python -m venv venv
