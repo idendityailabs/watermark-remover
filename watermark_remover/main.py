@@ -97,7 +97,8 @@ def generate_text_mask(image_path, output_mask_path):
 
     # Draw detected regions from EasyOCR
     for (bbox, text, prob) in all_results:
-        if prob > 0.05 and is_likely_watermark(bbox, image.shape, text):  # Check if it's likely a watermark
+        if prob > 0.3 and len(text.strip()) > 3 and is_likely_watermark(bbox, image.shape, text):
+        # if prob > 0.05 and is_likely_watermark(bbox, image.shape, text):  # Check if it's likely a watermark
             (top_left, top_right, bottom_right, bottom_left) = bbox
             points = np.array([top_left, top_right, bottom_right, bottom_left], dtype=np.int32)
             # Draw filled polygon
@@ -144,7 +145,7 @@ def process_single_image(args):
     input_path, output_dir = args
     try:
         # Create output filename
-        output_filename = f"cleaned_{Path(input_path).name}"
+        output_filename = f"{Path(input_path).name}"
         mask_filename = f"mask_{Path(input_path).name}"
         output_path = os.path.join(output_dir, output_filename)
         mask_path = os.path.join(output_dir, mask_filename)

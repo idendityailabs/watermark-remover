@@ -14,5 +14,5 @@ A Python tool for removing text and watermarks from images using computer vision
 python -m watermark_remover.main --input_dir /path/to/images --output_dir /path/to/output
 
 # Process a single image
-python -m watermark_remover.main --single /path/to/image.jpg
+python -m watermark_remover.main --single /path/to/image.jpg --output_dir /path/to/outputdir
 ```
