@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 opencv-python = "*"
 easyocr = "*"
+simple-lama-inpainting = "*"
+ultralytics = "*"
 
 [dev-packages]
 
